@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>صفحة المقالة</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 20px;
+    }
+    h1 {
+      color: #007BFF;
+    }
+    p {
+      line-height: 1.6;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    #timer {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 50px;
+    }
+    /* إخفاء الزر في البداية */
+    #registrationButton {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- زر الانتقال لصفحة التسجيل -->
+  <a href="gp2.html" id="registrationButton">انتقال إلى صفحة التسجيل</a>
+
+  <!-- عرض المقالة -->
+  <h1>كيفية الربح من الإنترنت</h1>
+  <p>الربح من الإنترنت هو مجال شاسع يشمل العديد من الفرص والطرق لكسب الدخل عبر الإنترنت. هناك العديد من الطرق المختلفة للربح من الإنترنت وتختلف في نطاقها وصعوبتها واحتياجاتها من المهارات. سأقدم لك نظرة عامة عن بعض هذه الطرق:</p>
+  <ul>
+    <li>التجارة الإلكترونية: يمكنك إنشاء متجر إلكتروني خاص بك وبيع منتجات مادية أو رقمية. يمكن أن تكون المنتجات الرقمية عبارة عن ملفات تحميل (مثل الكتب الإلكترونية أو المواد التعليمية) أو خدمات (مثل التصميم الجرافيكي أو التدريب عبر الإنترنت).</li>
+    <li>التسويق بالعمولة: يمكنك التسويق لمنتجات أو خدمات الشركات الأخرى عبر روابط تابعة، وعندما يقوم شخص ما بشراء المنتج عن طريق رابطك، تحصل على عمولة.</li>
+    <li>الإعلانات عبر الإنترنت: يمكنك الحصول على دخل من خلال عرض الإعلانات على موقعك أو قناتك على اليوتيوب، وسوف تحصل على دخل عندما ينقر الناس على هذه الإعلانات أو يشاهدونها.</li>
+    <li>بيع المنتجات على منصات التجارة الإلكترونية: مثل أمازون أو إيباي، حيث يمكنك بيع منتجاتك عبر هذه المنصات الكبيرة.</li>
+    <li>العمل الحر والمستقل: يمكنك استخدام مهاراتك الخاصة (مثل التصميم، البرمجة، الترجمة، الكتابة، إلخ) لتقديم خدماتك للعملاء عبر منصات العمل الحر على الإنترنت مثل Upwork وFiverr.</li>
+    <li>تطوير التطبيقات والبرمجيات: إذا كنت لديك معرفة في تطوير التطبيقات أو البرمجة، يمكنك إنشاء تطبيقات أو برمجيات تلبي احتياجات الناس وبيعها.</li>
+  </ul>
+
+  <!-- وضع وسم <br> في أفضل الأماكن لوضع إعلان البانر -->
+  <p>وسم <br> هنا يمكن وضع إعلان البانر</p>
+
+  <!-- المؤقت -->
+  <div id="timer">ستنتهي المهلة خلال <span id="countdown">30</span> ثانية...</div>
+
+  <script>
+    // الجزء الخاص بالمؤقت
+    let timeLeft = 30;
+    const countdownElement = document.getElementById('countdown');
+    const registrationButton = document.getElementById('registrationButton');
+    const timer = setInterval(() => {
+      timeLeft--;
+      countdownElement.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        // إظهار زر التسجيل بعد انتهاء المؤقت
+        registrationButton.style.display = 'inline-block';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة المدخل</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 20px;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        a {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <textarea id="textArea" rows="4" cols="50" placeholder="سلام عليكم لبنات ودراري كلنا باغيين نديرو لراصنا شهرية محترمة كتوصل تال 6000 درهم بدون اي خبرة او مهارة وباقل من ساعة يوميا مزيد من شرح على لموقع ديالنا"></textarea>
+        <button id="copyButton">نسخ النص</button>
+        <p id="resultText"></p>
+        <p>قم بنشر هذا النص على 20 تعليق بمجموعات فيسبوك وسوف تحصل على 5 دولارات</p>
+        <a href="https://exemple1.com" target="_blank">
+    </div>
+    <script>
+        document.getElementById("copyButton").addEventListener("click", function() {
+            var text = document.getElementById("textArea").value;
+            document.getElementById("resultText").innerText = text;
+        });
+    </script>
+</body>
+</html>

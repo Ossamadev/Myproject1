@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع رائع</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .random-image {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    img {
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 10px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>سلام عليكم لبنات ودراري! جبت لكم طريقة سهلة للعمل من المنزل بدون أي خبرة أو مهارة لكي تحصلوا على أكثر من 200 درهم يومياً.</h1>
+    <p>مزيد من التفاصيل على <a href="https://example.com">example.com</a></p>
+
+    <div class="random-image">
+      <img id="randomImage" src="" alt="صورة عشوائية">
+    </div>
+
+    <button onclick="copyToClipboard()">نسخ النص الأول</button>
+    <button onclick="downloadImage()">تنزيل الصورة</button>
+
+    <p>قم بنشر هذه الصورة والنص في ملفك الشخصي ومجموعات فيسبوك الخاصة بالعمل وسوف تحصلوا على أرباحكم منها.</p>
+  </div>
+
+  <script>
+    const images = [
+      'image/img1.jpg',
+      'image/img2.jpg',
+      'image/img3.jpg',
+      'image/img4.jpg'
+    ];
+
+    function getRandomImage() {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      return images[randomIndex];
+    }
+
+    function copyToClipboard() {
+      const textToCopy = "سلام عليكم لبنات ودراري! جبت لكم طريقة سهلة للعمل من المنزل بدون أي خبرة أو مهارة لكي تحصلوا على أكثر من 200 درهم يومياً. مزيد من التفاصيل على example.com";
+      const textarea = document.createElement('textarea');
+      textarea.value = textToCopy;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      alert("تم نسخ النص بنجاح!");
+    }
+
+    function downloadImage() {
+      const randomImage = getRandomImage();
+      const imageElement = document.getElementById('randomImage');
+      imageElement.src = randomImage;
+    }
+  </script>
+</body>
+</html>

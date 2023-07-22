@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>دليلك لبدء العمل الحر على الإنترنت</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 20px;
+    }
+    h1 {
+      color: #007BFF;
+    }
+    p {
+      line-height: 1.6;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    #timer {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 50px;
+    }
+    #registrationButton {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>دليلك لبدء العمل الحر على الإنترنت: الخطوات والنصائح الأساسية</h1>
+
+  <!-- النص -->
+  <p>
+    يعتبر العمل الحر على الإنترنت من أكثر الاختيارات جاذبيةً في العصر الرقمي الحديث. يتيح العمل الحر فرصة مميزة للأفراد للعمل من أي مكان وفي أي وقت واستغلال مهاراتهم الفريدة لتقديم خدماتهم للعملاء حول العالم. إذا كنت ترغب في الدخول في عالم العمل الحر على الإنترنت، فهذه المقالة ستوفر لك الإرشادات والنصائح الأساسية لبدء مشوارك.
+  </p>
+
+  <!-- القائمة -->
+  <h2>المحتوى:</h2>
+  <ul>
+    <li>اختيار مجال العمل:</li>
+    <li>التحليل الذاتي: مهاراتك واهتماماتك ومجالات الخبرة التي تمتلكها.</li>
+    <li>ابحث عن الطلب: استكشاف أنواع الخدمات التي يبحث عنها العملاء على الإنترنت وتحديد أفضل الفرص.</li>
+    <li>تطوير مهاراتك:</li>
+    <li>التعليم والتدريب: كيفية تحسين مهاراتك الحالية واكتساب مهارات جديدة.</li>
+    <li>الاستثمار في نفسك: تحسين معرفتك وخبرتك لتقديم خدمات أفضل وأكثر جودة.</li>
+    <li>إنشاء علامتك التجارية الشخصية:</li>
+    <li>تحديد هويتك وشعارك الخاص.</li>
+    <li>إنشاء موقع إلكتروني وحسابات على وسائل التواصل الاجتماعي.</li>
+    <li>تحديد الأسعار والتسعير:</li>
+    <li>كيفية تحديد سياسة التسعير الصحيحة لخدماتك.</li>
+    <li>الاستفادة من العروض والتخفيضات الأولية لجذب العملاء.</li>
+    <li>البحث عن العملاء وتسويق خدماتك:</li>
+    <li>استخدام منصات العمل الحر على الإنترنت مثل Upwork وFiverr.</li>
+    <li>الترويج لنفسك وخدماتك عبر الشبكات الاجتماعية والمنتديات.</li>
+    <li>إدارة وتنظيم العمل:</li>
+    <li>تنظيم الجدول الزمني وتحديد أولويات العمل.</li>
+    <li>كيفية التعامل مع العملاء وإدارة الاتصالات.</li>
+    <li>توفير خدمات ذات جودة عالية:</li>
+    <li>تحقيق رضا العملاء والتفرد في تقديم الخدمات.</li>
+    <li>الالتزام بالمواعيد والجودة في التسليم.</li>
+    <li>توسيع قاعدة العملاء والتحسين المستمر:</li>
+    <li>كسب تقييمات ومراجعات إيجابية من العملاء.</li>
+    <li>التحسين المستمر للخدمات والتطوير الشخصي.</li>
+  </ul>
+
+  <!-- زر انتقال لصفحة التسجيل -->
+  <div id="timer">سيتم تحويلك لصفحة التالية بعد <span id="countdown">55</span> ثانية...</div>
+  <a href="#" id="registrationButton">زر 
+    <!-- زر انتقال لصفحة التسجيل -->
+  <div id="timer">سيتم تحويلك لصفحة التالية بعد <span id="countdown">55</span> ثانية...</div>
+  <a href="#" id="registrationButton" style="display: none;">زر التسجيل</a>
+
+  <script>
+    // الانتظار لمدة 55 ثانية
+    let secondsLeft = 55;
+    const countdownElement = document.getElementById('countdown');
+
+    function countdown() {
+      if (secondsLeft === 0) {
+        // عند انتهاء المؤقت، يظهر زر التسجيل
+        document.getElementById('timer').style.display = 'none';
+        document.getElementById('registrationButton').style.display = 'block';
+      } else {
+        countdownElement.textContent = secondsLeft;
+        secondsLeft--;
+        setTimeout(countdown, 1000);
+      }
+    }
+
+    // بدء المؤقت عند تحميل الصفحة
+    countdown();
+  </script>
+</body>
+</html>
+

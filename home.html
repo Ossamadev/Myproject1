@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحة الأحالات</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .buttons {
+      margin-top: 50px;
+    }
+
+    button {
+      border-radius: 20px;
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #4285F4;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    #withdrawBtn {
+      background-color: #FF0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="balance">رصيدك: 000$</div>
+    <div class="clicks">عدد نقراتك: 0</div>
+  </div>
+  <div class="buttons">
+    <button id="affPostBtn">احالات المنشور</button>
+    <button id="affCommentBtn">احالات التعليق</button>
+  </div>
+  <button id="withdrawBtn">سحب رصيدك</button>
+  <script>
+    document.getElementById("affPostBtn").addEventListener("click", function() {
+      window.location.href = "affpost.html";
+    });
+
+    document.getElementById("affCommentBtn").addEventListener("click", function() {
+      window.location.href = "affcomment.html";
+    });
+
+    document.getElementById("withdrawBtn").addEventListener("click", function() {
+      window.location.href = "wp.html";
+    });
+  </script>
+</body>
+</html>

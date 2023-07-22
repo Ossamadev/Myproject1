@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>صفحة تسجيل الدخول</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .login-container {
+      width: 300px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #7b68ee;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .login-container h2 {
+      color: #fff;
+    }
+
+    .input-field {
+      margin: 10px 0;
+    }
+
+    .input-field label,
+    .input-field input {
+      display: block;
+      width: 100%;
+    }
+
+    .input-field input {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .input-field input[type="submit"] {
+      background-color: #5a4fcf;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>تسجيل الدخول</h2>
+    <form onsubmit="return redirectToHome()">
+      <div class="input-field">
+        <label for="full-name">الاسم الكامل:</label>
+        <input type="text" id="full-name" name="full-name" required>
+      </div>
+      <div class="input-field">
+        <label for="phone">رقم الهاتف:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="input-field">
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="input-field">
+        <input type="submit" value="دخول">
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function redirectToHome() {
+      var fullName = document.getElementById("full-name").value;
+      var phone = document.getElementById("phone").value;
+      var email = document.getElementById("email").value;
+
+      // يمكنك تغيير "home.html" إلى اسم الصفحة التي ترغب بالانتقال إليها بعد التسجيل.
+      window.location.href = "home.html";
+      return false;
+    }
+  </script>
+</body>
+</html>
